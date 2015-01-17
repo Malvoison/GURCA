@@ -1,0 +1,16 @@
+HKCR
+{
+	NoRemove CLSID
+	{
+		ForceRemove {642BECD3-83B1-48B4-BD63-7E7654F0F1B2} = s 'TsClientMacAddr Class'
+		{
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			TypeLib = s '{419F77F3-9DC4-4F6B-B2D9-6355047CC67F}'
+			Version = s '1.0'
+		}
+	}
+}

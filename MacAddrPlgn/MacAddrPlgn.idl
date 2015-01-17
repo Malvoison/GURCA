@@ -1,0 +1,34 @@
+// MacAddrPlgn.idl : IDL source for MacAddrPlgn
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (MacAddrPlgn.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(AA4E1FBA-73AF-45CE-AFE1-6CCB9C32D84A),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ITsClientMacAddr : IDispatch{
+};
+[
+	uuid(419F77F3-9DC4-4F6B-B2D9-6355047CC67F),
+	version(1.0),
+]
+library MacAddrPlgnLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(642BECD3-83B1-48B4-BD63-7E7654F0F1B2)		
+	]
+	coclass TsClientMacAddr
+	{
+		[default] interface ITsClientMacAddr;
+	};
+};
+
